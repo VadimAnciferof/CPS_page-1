@@ -2,87 +2,91 @@
 <html lang = "ru">
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="./css/style-reset.css" rel="stylesheet"></link>
         <link href="./css/style.css" rel="stylesheet"></link>
         <link href="./css/fonts.css" rel="stylesheet"></link>
-		<title>CPS - Услуги по ремонту техники</title>
+		<title>CPS</title>
         <meta charset="utf=8">
 	</head>
 	<body>
-        <header class="header">
-            <div class="menu-up menu-up--hidden">
-                <button class="menu-up__item menu-up__button menu-up__button--hidden">
-                    <img src="./icons/burger.svg" alt="Иконка выпадающего меню">
-                </button>
-                <span class="menu-up__item menu-up__header-line menu-up__item--hidden"></span> 
-                <div class="menu-up__item menu-up__logo">
-                    <img src="./icons/logo.svg" alt="CPS - Логотип компании">
+        <div class="wrapper">
+            <header class="header header--background header--hidden">
+                <div class="header__item">
+                    <div class="header__left-side">
+                        <button class="header__button button">
+                            <img src="./icons/burger.svg" class="button__icon">
+                        </button>
+                        <span class=" header__line header-line--hidden"></span>
+                    </div>
+                    <img src="./icons/logo.svg" class="header__item header__logo">
                 </div>
-                <button class="menu-up__item menu-up__button menu-up__button--hidden menu-up__item--hidden">
-                    <img src="./icons/call.svg" alt="Иконка настроек">
-                </button>
-                <button class="menu-up__item menu-up__button menu-up__button--hidden menu-up__item--hidden">
-                    <img src="./icons/repair.svg" alt="Иконка настроек">
-                </button>
-                <button class="menu-up__item menu-up__button menu-up__button--hidden menu-up__item--hidden">
-                    <img src="./icons/profile.svg" alt="Иконка настроек">
-                </button>
-                <span class="menu-up__item menu-up__header-line"></span> 
-                <button class="menu-up__item menu-up__button menu-up__button--hidden">
-                    <img src="./icons/repair.svg" alt="Иконка оставить заявку">
-                </button>
-                <button class="menu-up__item menu-up__button menu-up__button--hidden">
-                    <img src="./icons/checkstatus.svg" alt="Иконка статус ремонта">
-                </button>
-            </div>
-        </header>
-        <main class="main">
-                <div class="menu-down">
-                    <span class="menu-down__container-title"> 
-                        <h1 class="menu-down__name">Услуги и сервисы</h1>
-                        <div class="menu-down__buttons menu-down__buttons--hidden">
-                            <button class="menu-down__button menu-down__button--hidden">
-                                <span class="menu-down__button-text">Оставить заявку</span>
-                                <img src="./icons/repair.svg" alt="Иконка оставить заявку">
+                <div class="header__item buttons-right">
+                    <div class="buttons-right__item buttons-right-l buttons-right-l--hidden">
+                        <button class="header__button button">
+                            <img src="./icons/call.svg" class="button__icon">
+                        </button>
+                        <button class="header__button button">
+                            <img src="./icons/chat.svg" class="button__icon">
+                        </button>
+                        <button class="header__button button">
+                            <img src="./icons/profile.svg" class="button__icon">
+                        </button>
+                    </div>
+                    <span class="header__line"></span>
+                    <div class="buttons-right__item buttons-right-r">
+                        <button class="header__button button">
+                            <img src="./icons/repair.svg" class="button__icon">
+                        </button>
+                        <button class="header__button button">
+                            <img src="./icons/checkstatus.svg" class="button__icon">
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <nav class="nav">
+                    <div class="nav__item nav-up">
+                        <div class="nav-up__title">
+                            <span class="nav-up__line"><img src="/icons/highlight.svg"></span>
+                            <h1 class="nav-up__main-title nav-up__main-title--style">Услуги и сервисы</h1>
+                        </div>
+                        <div class="nav-up__buttons nav-up__buttons--hidden">
+                            <button class="nav-up__button">
+                                <span class="button__text button__text--style">Оставить заявку</span>
+                                <img src="./icons/repair.svg">
                             </button>
-                            <button class="menu-down__button menu-down__button--hidden">
-                                <span class="menu-down__button-text">Статус ремонта</span>
-                                <img src="./icons/checkstatus.svg" alt="Иконка статус ремонта">
+                            <button class="nav-up__button">
+                                <span class="button__text button__text--style">Статус ремонта</span>
+                                <img src="./icons/checkstatus.svg">
                             </button>
                         </div>
-                    </span>
-                    <nav class="menu-down__nav"><!-- Ссылки-якоря на дальнейшую часть макета -->
-                        <ul class="menu-down__links">
-                            <li><a href ="#" class="menu-down__link menu-down__link--decoration menu-down__link--selected">Ремонтируемые устройства</a></li>
-                            <li><a href ="#" class="menu-down__link menu-down__link--decoration">Дополнительные услуги</a></li>
-                            <li><a href ="#" class="menu-down__link menu-down__link--decoration">Цены на услуги</a></li>
-                            <li><a href ="#" class="menu-down__link menu-down__link--decoration">Адреса сервисных центров</a></li>
-                            <li><a href ="#" class="menu-down__link menu-down__link--decoration">Адреса сервисных центров</a></li>
-                            <li><a href ="#" class="menu-down__link menu-down__link--decoration">Адреса сервисных центров</a></li>
-                            <li><a href ="#" class="menu-down__link menu-down__link--decoration">Отзывы</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            <section class="about">
-                <div class="container">
-                    <input class="about__checker-next about__checker-next--hidden" type="checkbox" id="checkbox-next">
-                    <article class="about__text">
-                        <p>
-                            Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
-                            Только у нас вы можете отремонтировать свой ноутбук Dell с официальной 
-                            гарантией производителя.
-                        </p>
-                        <p>
-                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
-                            что подтверждает большое количество постоянных клиентов. 
-                            Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким. 
-                        </p>
-                    </article>
-                    <label class="about__checker-next-button" for="checkbox-next"></label>
-                </div>
-                <img class="about__about-img" src="./img/imgabout.png">
-            </section>
-        </main>
-        <footer>
-        </footer>
+                    </div>
+                    <ul class="nav__item nav-down">
+                        <li class="nav-down__button"><a class="nav-down__text" href="#">Ремонтируемые устройства</a></li>
+                        <li class="nav-down__button"><a class="nav-down__text" href="#">Дополнительные услуги</a></li>
+                        <li class="nav-down__button"><a class="nav-down__text" href="#">Ремонтируемые бренды</a></li>
+                        <li class="nav-down__button"><a class="nav-down__text" href="#">Цены на услуги</a></li>
+                        <li class="nav-down__button"><a class="nav-down__text" href="#">Специальные цены</a></li>
+                        <li class="nav-down__button"><a class="nav-down__text" href="#">Отзывы</a></li>
+                    </ul>
+                </nav>
+                <section class="about">
+                    <div class="about__item about-content">
+                        <input class="about-content__checkbox about-content__checkbox--hidden" type="checkbox" id="check">
+                        <article class="about-content__text about-content__text--style">
+                            <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать 
+                            свой ноутбук Dell с официальной гарантией производителя.</p>
+                            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает 
+                            большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в 
+                            свою очередь, советуют нас родным и близким.</p>
+                        </article>
+                        <label class="about-content__more about-content__more--style" for="check"></label>
+                    </div>
+                    <img src="../img/imageabout.jpg" class="about__item about-img">
+                </section>
+            </main>
+            <footer>
+            </footer>
+        </div>
 	</body>
 </html>

@@ -1,251 +1,286 @@
-@media screen { /*Экраны*/
-    body{
-        font-family: "TT Lakes";
-        font-size: 14px;
-        margin: 0;
-        padding: 0;
-    }
-    /* цвет-фона */
-    main, html{
-        background-color: #F8F8F8;
-    }
-    p{
-        padding: 0;
-        margin: 0;
-    }
-    .menu-down__buttons--hidden{
-        display: none;
-    }
+html{
+    color: #1B1C21;
+    font-family: "TT Lakes";
+    font-size: 14px;
+}
+.wrapper{
+    max-width: 1120px;
+    margin: 0 auto;
+}
+body{
+    background-color:#F8F8F8;
+}
+
+/*--Шапка-------------------------------------------------------------------------------*/
+@media (min-width: 320px) {
     .header{
-        background-color: #FFF;
-    }
-    .menu-up{
         display: flex;
+        justify-content: space-between;
+        padding: 0px 16px;
         align-items: center;
-        padding: 0;
-        margin: 0;
         height: 88px;
     }
-}
-@media screen and (min-width: 320px){ /*Мобилки*/
-    /* шапка */
-    .menu-up__header-line{
-        display: inline-block;
-        height: 32px;
+    .header--background{
+        background-color: #FFF;
+    }
+    /*-------------------------------*/
+    .header__item{
+        display: flex;
+        align-items: inherit;
+        column-gap: 20px;
+    }
+    .header__line{
         width: 2px;
-        background-color: rgba(234, 234, 234, 1);
-        margin: 28px 16px 28px auto;
+        height: 32px;
         border-radius: 1px;
+        background: #EAEAEA;
     }
-    .menu-up__button{
-        padding-left: 0;
-        padding-right: 0;
-        margin-right: 16px;
-    }
-    .menu-up__logo{
-        display: inline-block;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: auto;
-    }
-    .menu-up__button:nth-of-type(1){
-        margin-right: 16px;
-        margin-left: 16px;
-    }
-    .menu-up__button:nth-of-type(2){
-        margin-right: 16px;
-        margin-left: auto;
-    }
-    .menu-up__button--hidden, .menu-down__button--hidden{ 
-        background-color: #FFFFFF00;
-        border: none;
-    }
-
-    .menu-up__item--hidden{
+    .header-line--hidden{
         display: none;
     }
-    /* меню */
-    .menu-down{
+    .button__icon, .button{
+        height: 40px;
+        width: 40px;
+    }
+     /*--Правая-часть-шапка--*/
+     .buttons-right{
+        display: flex;
+        column-gap: 20px; /*Отступы-линии*/
+     }
+     .buttons-right-r{
+        display: flex;
+        column-gap: 16px;
+     }
+     .buttons-right-l--hidden{
+        display: none;
+     }
+}
+@media (min-width: 768px){
+    .header{
+        padding: 0px 24px;
+    }
+    .buttons-right-l--hidden, .header-line--hidden{
+        display: block;
+     }
+     .buttons-right-l{
+        display: flex;
+        column-gap: 16px;
+     }
+    .header__left-side{
+        display: flex;
+        align-items: inherit;
+        column-gap: 20px;
+    }
+}
+@media (min-width: 1120px){
+    .header--hidden{
+        display: none;
+    }
+}
+/*--Мейн---Верхняя-шапка----------------------------------------------------------------------------*/
+@media (min-width: 320px){
+    /*------Тайтл-----*/
+    .nav-up__buttons--hidden{
+        display: none;
+    }
+    .nav{
         display: flex;
         flex-direction: column;
+        margin-top: 24px;
     }
-    .menu-down__name{
-        width: 288px;
+    .nav-up{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-up__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 249px;
         height: 40px;
-        margin: 24px 16px 24px 16px;
-        position: relative;
-        font-size: 2em;
     }
-    .menu-down__name::before{
-        content: url("../icons/highlight.svg");
-        position: absolute;
-        left: -16px; /*?*/
+    .nav-up__main-title--style{
+        color: #1B1C21;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 142.857%;
+        letter-spacing: -0.6px;
     }
-    /* ссылки-якоря */
-    .menu-down__links{
-        padding: 0;
-        margin: 0;
+    /*------Ссылки-----*/
+    .nav-down{
         display: flex;
-        white-space: nowrap;
-        overflow-x: auto;
-        list-style-type:  none;
-        margin-left: 16px;
+        overflow: auto;
+        min-height: 80px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 24px 16px 12px 16px;
     }
-    .menu-down__links::-webkit-scrollbar {width: 1px;}
-    .menu-down__link{
+    .nav-down::-webkit-scrollbar{
+        width: 1px;
+    }
+    .nav-down__button{
         display: flex;
-    }
-    .menu-down__link--decoration{ /*Декор ссылки*/
-        color: #7E7E82;
-        font-size: 16px;
-        text-decoration: none;
+        align-items: center;
         padding: 8px 16px;
+        white-space: nowrap;
     }
-    .menu-down__link:active, .menu-down__link--selected{ /*Декор ссылки в активе*/
+    .nav-down__button:hover{
         border-radius: 6px;
         border: 2px solid #B8FFEC;
         background: #FFF;
     }
-    /* контент */
+    .nav-down__text{
+        color: #7E7E82;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+}
+@media (min-width: 768px){
+    /*------Тайтл-----*/
+    .nav-up__title{
+        width: 259px;
+    }
+    /*------Ссылки-----*/
+    .nav-down{
+        padding: 32px 16px 16px 24px;
+    }
+
+}
+@media (min-width: 1120px){
+    /*------Тайтл-----*/
+    .nav{
+        margin-top: 42px;
+    }
+    .nav-up__title{
+        width: 267px;
+    }
+    .nav-up__buttons--hidden{
+        display: flex;
+    }
+    .nav-up__buttons{
+        display: flex;
+        column-gap: 32px;
+        margin-right: 32px;
+    }
+    .nav-up__button{
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+    }
+    .button__text--style{
+        color: #1B1C21;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
+    }
+    .nav-up__title{
+        width: 267px;
+    }
+    /*------Ссылки-----*/
+    .nav-down{
+        flex-wrap: wrap;
+        padding: 32px 16px 16px 32px;
+    }
+}
+/*--Мейн---О-нас----------------------------------------------------------------------------*/
+@media (min-width: 320px){
     .about{
         display: flex;
         flex-direction: column;
-        row-gap: 10px;
-        overflow: hidden;
     }
-    .about__text{
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        width: 288px;
+        margin-left: 16px;
+    }
+    .about-content__checkbox:checked ~ .about-content__more::after{
+        content: "Свернуть";
+    }
+    .about-content__checkbox ~ .about-content__more::after{
+        content: "Читать далее";
+    }
+    .about-content__more::before{
+        content: url("../icons/expand.svg");
+        position: absolute;
+        left: -24px;
+    }
+    .about-content__checkbox:checked ~ .about-content__text{
+        max-height: none;
+    }
+    .about-content__more{
+        margin-left: 20px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        position: relative;
+    }
+    .about-content__checkbox--hidden{
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+    }
+    .about-content__text{
         display: flex;
         flex-direction: column;
         row-gap: 18px;
-        margin-left: 16px;
-        max-height: 95px;
+        max-height: 90px;
+        overflow: hidden;
         width: 288px;
-        overflow: hidden;
+    }
+    .about-content__text--style{
         color: #1B1C21;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.2px;
     }
-    /* читать далее */
-    .about__checker-next--hidden{
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-    }
-    .about__checker-next-button{ /*Кастомный чекбокс*/
-        display: flex;
-        align-items: center;
-        margin: 16px auto auto 16px;
+    .about-content__more--style{
         font-size: 16px;
         font-weight: 500;
-        position: relative;
-    }
-    .about__checker-next ~ .about__checker-next-button::after{ /*Текст*/
-        content: "Читать далее";
-    }
-    .about__checker-next:checked ~ .about__checker-next-button::after{ /*Текст*/
-        content: "Свернуть";
-    }
-    .about__checker-next-button::before{
-        content: url("../icons/expand.svg");
-    }
-    .about__checker-next:checked ~ .about__text {
-        max-height: none;
-      }
-    /* картинка */
-    .about__about-img{
-        width: 100%;
-        height: 100%;
-        margin-bottom: 16px;
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
     }
 }
-
-@media screen and (min-width: 760px){ /* Планшеты */
-    .menu-up__item--hidden{
-        display: block;
-    }
-    .menu-up__header-line{
-        margin: 28px 16px 28px 0;
-    }
-    .menu-up__button:nth-of-type(1){
-        margin-right: 16px;
-    }
-    .menu-up__logo{
-        display: inline-block;
-        align-items: stretch;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+@media (min-width: 768px){
     .about{
         flex-direction: row;
-        justify-content: space-around;
-        padding-bottom: 40px;
-        height: 100%;
-      }
-    .about__about-img{
-        display: inline-block;
+        justify-content: space-between;
+        margin-right: 25px;
+        align-items: flex-start;
+    }
+    .about-img{
         width: 360px;
-        height: 208px;
-        border-radius: 6px;
-        margin-top: 10px;
+        border-radius: 6px;  
     }
-    .about__text{
-        max-height: 130px;
+    .about-content{
+        margin-left: 24px;
+    }
+    .about-content__text{
+        max-height: 160px;
         width: 312px;
-        margin-left: 0px;
     }
-    .about__checker-next-button{
-        margin-left: 0px;
-        margin-bottom: 0px;
+    .about-content__text--style{
+        line-height: 20px;
     }
 }
-@media screen and (min-width: 1120px){ /* Браузеры */
-    .menu-up--hidden{
-        display: none;
+@media (min-width: 1120px){
+    .about{
+        margin-right: 36px;
     }
-    .menu-down__buttons--hidden{
-        display: inline-block;
+    .about-content{
+        margin-left: 32px;
     }
-    .about__text{
-        max-height: 160px;
+    .about-content__text{
         width: 490px;
     }
-    .about__about-img{
-        width: 531px;
-        height: 307px;
-    }
-    .menu-down__links{
-        box-sizing: border-box;
-        padding-left: 16px;
-        flex-wrap: wrap;
-    }
-    .menu-down__links li:first-of-type{ /*Отсуп слева у 1-ого элемента*/
-        margin-left: 0px;
-    }
-    .menu-down__name{
-        margin-top: 40px;
-    }
-    .menu-down__container-title{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    .menu-down__buttons{
-        display: flex;
-        column-gap: 32px;
-        padding-right: 32px;
-        margin-top: 40px;
-    }
-    .menu-down__button{
-        line-height: 40px;
-        display: flex;
-        column-gap: 8px;
-    }
-    .menu-down__button-text{
-        font-family: "TT Lakes";
-        font-size: 16px;
-        font-weight: 500;
+    .about-img{
+        width: 532px;
+        border-radius: 6px;  
     }
 }
-
+/*--Подвал-------------------------------------------------------------------------------*/
