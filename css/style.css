@@ -244,6 +244,9 @@ body{
         line-height: 24px; /* 150% */
         letter-spacing: -0.2px;
     }
+    .about-img{
+        width: 100%;
+    }
 }
 @media (min-width: 768px){
     .about{
@@ -254,6 +257,7 @@ body{
     }
     .about-img{
         width: 360px;
+        height: 208px;
         border-radius: 6px;  
     }
     .about-content{
@@ -279,6 +283,7 @@ body{
     }
     .about-img{
         width: 532px;
+        height: 307px;
         border-radius: 6px;  
     }
 }
